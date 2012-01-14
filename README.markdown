@@ -16,3 +16,7 @@ A new chat instance should be created as follows:
     $("#chat").append(chat.render());
   });
 ```
+
+## Development
+
+**TODO**
