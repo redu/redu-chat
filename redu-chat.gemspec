@@ -20,5 +20,7 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "guard-coffeescript"
+  s.add_development_dependency "jasmine"
+  s.add_development_dependency "rails", "3.0.11"
 end

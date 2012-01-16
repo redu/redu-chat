@@ -6,6 +6,17 @@ Creates a Single User Chat (SUE) using WebSockets through
 agnostic but for now is tested with Rails 3.0.11
 
 
+## Setup
+
+Add ``gem 'redu-chat', :git => 'git@github.com:redu/redu-chat.git'``
+to your ``Gemfile`` and run ``bundle install``.
+
+Than you just need copy the static assets as follows:
+
+```bash
+rake redu-chat:init
+```
+
 ## Usage
 
 A new chat instance should be created as follows:
