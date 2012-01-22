@@ -1,0 +1,198 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/typography/text/ellipsis";
+@import "compass/utilities/general/clearfix";
+
+body { padding: 10px; }
+
+.chat-tray {
+  font-family: tahoma, arial, sans-serif;
+  font-size: 11px;
+  height: 60px;
+  position: absolute;
+  bottom: 10px;
+  left: 200px;
+  width: 1000px;
+  padding-top: 15px;
+
+  .window-item {
+    .borderradius & {
+      @include border-radius(5px);
+    }
+
+    .cssgradients & {
+      @include background(linear-gradient(rgb(255,238,215), rgb(249,167,55)));
+    }
+
+    .boxshadow & {
+      @include single-box-shadow(transparentize(#000, 0.5), 0, 0, 3px, 0);
+    }
+
+    &:after {
+      content:" ";
+      position:absolute;
+      bottom:-10px;
+      left: 65px;
+      border-width:10px 10px 0;
+      border-style: solid;
+      border-color: rgb(249,167,55) transparent;
+      display:block;
+      width:0;
+    }
+
+    float: left;
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+    width: 150px;
+    height: 28px;
+    border: 1px solid rgb(249,167,55);
+
+    .chat-contact {
+      @include ellipsis();
+      .textshadow & {
+        @include text-shadow(white, 0, 1px, 0);
+      }
+
+      display: block;
+      margin-left: 15px;
+      margin-top: 8px;
+      width: 115px;
+      font-weight: bold;
+      color: rgb(243,94,0);
+    }
+
+    .window-close {
+      .borderradius & {
+        @include border-radius(3px);
+      }
+      .textshadow & {
+        @include text-shadow(white, 0, 1px, 0);
+      }
+
+      font-size: 10px;
+      position: absolute;
+      display: block;
+      padding: 2px 5px 3px 5px;
+      color: rgb(243,123,56);
+      text-align: center;
+      font-weight: bold;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .window-item-ding {
+    .cssgradients & {
+      @include background(linear-gradient(rgb(249,167,55), rgb(243,123,56)));
+    }
+
+    &:after {
+      border-color: rgb(243,123,56) transparent;
+    }
+
+    border-color: rgb(243,94,0);
+
+    .chat-contact {
+      .textshadow & {
+        @include text-shadow(rgb(243,94,0), 0, -1px, 0);
+      }
+
+      color: white;
+    }
+
+    .window-close {
+      background-color: rgb(255, 238, 215);
+      color: rgb(243,123,56);
+    }
+  }
+
+  .window-item:hover {
+    .cssgradients & {
+      @include background(linear-gradient(rgb(255,238,215), rgb(243,123,56)));
+    }
+    &:after {
+      border-color: rgb(243,123,56) transparent;
+    }
+
+    border-color: rgb(243,123,56);
+
+    .chat-contact {
+      .textshadow & {
+        @include text-shadow(white, 0, 1px, 0);
+      }
+      color: rgb(243,94,0);
+    }
+
+    .window-close {
+      .textshadow & {
+        @include text-shadow(white, 0, 1px, 0);
+      }
+
+      background-color: rgb(255, 238, 215);
+      color: rgb(243,123,56);
+    }
+  }
+
+  .window-item-opened {
+    &:after {
+      bottom: 28px;
+      border-width: 0 10px 10px;
+      border-color: rgb(255,238,215) transparent;
+    }
+    &.window-item:hover:after {
+      border-color: rgb(255,238,215) transparent;
+    }
+    &.window-item-ding:after {
+      border-color: rgb(249,167,55) transparent;
+    }
+  }
+
+  .window-item .chat-dialog { display: none; }
+  .window-item-opened .chat-dialog { display: block; }
+
+  .chat-dialog {
+    .borderradius & {
+      @include border-radius(5px);
+    }
+    .boxshadow & {
+      @include single-box-shadow(transparentize(#000, 0.5), 0, 0, 3px, 0);
+    }
+
+    background-color: white;
+    display: block;
+    position: relative;
+    border: 1px solid rgb(243,123,56);
+    top: -360px;
+    width: 280px;
+    height: 320px;
+
+    .chat-input {
+      .borderradius & {
+        @include border-bottom-left-radius(5px);
+        @include border-bottom-right-radius(5px);
+      }
+
+      border-top: 1px solid rgb(243,123,56);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 31px;
+      background-color: rgb(240,240,240);
+      width: 100%;
+
+      input {
+        @include reset-focus;
+        border: none;
+        height: 29px;
+        width: 100%;
+        background-color: transparent;
+      }
+    }
+  }
+}
