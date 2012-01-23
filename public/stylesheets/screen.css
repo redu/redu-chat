@@ -318,3 +318,86 @@ body {
   width: 100%;
   background-color: transparent;
 }
+/* line 198, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-info {
+  height: 35px;
+  margin: 8px;
+}
+/* line 203, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-info-contact {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: #4cacd5;
+  font-weight: bold;
+  width: 140px;
+  float: left;
+  display: block;
+}
+/* line 212, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-contact-status,
+.chat-tray .chat-dialog .chat-status {
+  color: #b3b2b3;
+}
+/* line 215, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-minimize {
+  display: block;
+  float: right;
+  padding: 2px 1px 3px 4px;
+  width: 12px;
+  height: 12px;
+  background-color: #dbeff7;
+  color: #1789c3;
+  font-weight: bold;
+  font-size: 12px;
+}
+/* line 216, ../../lib/sass/screen.scss */
+.borderradius .chat-tray .chat-dialog .chat-minimize {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 227, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-text {
+  margin: 8px 2px 8px 8px;
+  height: 230px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 233, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-text li {
+  margin-right: 18px;
+  display: inline-block;
+  width: 254px;
+  clear: both;
+  margin-bottom: 10px;
+}
+/* line 240, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-text li .chat-time {
+  display: none;
+  width: 60px;
+  margin-top: -10px;
+  float: right;
+  color: #b3b2b3;
+}
+/* line 247, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-text li:hover .chat-time {
+  display: block;
+}
+/* line 251, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-text .chat-dialog-thumb {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  float: left;
+}
+/* line 258, ../../lib/sass/screen.scss */
+.chat-tray .chat-dialog .chat-text .chat-line {
+  display: block;
+  float: left;
+}

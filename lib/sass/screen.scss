@@ -194,5 +194,71 @@ body { padding: 10px; }
         background-color: transparent;
       }
     }
+
+    .chat-info {
+      height: 35px;
+      margin: 8px;
+    }
+
+    .chat-info-contact {
+      @include ellipsis;
+      color: rgb(76,172,213);
+      font-weight: bold;
+      width: 140px;
+      float: left;
+      display: block;
+    }
+    .chat-contact-status,
+    .chat-status {
+      color: rgb(179,178,179);
+    }
+    .chat-minimize {
+      .borderradius & { @include border-radius(3px); }
+      display: block;
+      float: right;
+      padding: 2px 1px 3px 4px;
+      width: 12px;
+      height: 12px;
+      background-color: rgb(219,239,247);
+      color: rgb(23,137,195);
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .chat-text {
+      margin: 8px 2px 8px 8px;
+      height: 230px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      li {
+        margin-right: 18px;
+        display: inline-block;
+        width: 254px;
+        clear: both;
+        margin-bottom: 10px;
+
+        .chat-time {
+          display: none;
+          width: 60px;
+          margin-top: -10px;
+          float: right;
+          color: rgb(179,178,179);
+        }
+        &:hover .chat-time {
+          display: block;
+        }
+      }
+      .chat-dialog-thumb {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        float: left;
+      }
+
+      .chat-line {
+        display: block;
+        float: left;
+      }
+    }
   }
 }

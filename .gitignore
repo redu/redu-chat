@@ -5,3 +5,4 @@ bin
 .bundle
 Gemfile.lock
 pkg/*
+.sass-cache
