@@ -16,7 +16,7 @@ body { padding: 10px; }
   height: 60px;
   position: absolute;
   bottom: 10px;
-  left: 200px;
+  left: 100px;
   width: 1000px;
   padding-top: 15px;
 
@@ -67,25 +67,25 @@ body { padding: 10px; }
       color: rgb(243,94,0);
     }
 
-    .window-close {
-      .borderradius & {
-        @include border-radius(3px);
-      }
-      .textshadow & {
-        @include text-shadow(white, 0, 1px, 0);
-      }
+  }
 
-      font-size: 10px;
-      position: absolute;
-      display: block;
-      padding: 2px 5px 3px 5px;
-      color: rgb(243,123,56);
-      text-align: center;
-      font-weight: bold;
-      right: 0;
-      top: 0;
+  .window-item-opened {
+    &:after {
+      bottom: 28px;
+      border-width: 0 10px 10px;
+      border-color: rgb(249,167,55) transparent;
+    }
+    &.window-item:hover:after {
+      border-color: rgb(255,238,215) transparent;
+    }
+    &.window-item-ding:after {
+      border-color: rgb(249,167,55) transparent;
+    }
+    .cssgradients & {
+      @include background(linear-gradient(rgb(249,167,55), rgb(255,238,215)));
     }
   }
+
 
   .window-item-ding {
     .cssgradients & {
@@ -107,9 +107,11 @@ body { padding: 10px; }
     }
 
     .window-close {
-      background-color: rgb(255, 238, 215);
-      color: rgb(243,123,56);
+      .textshadow & {
+        @include text-shadow(rgb(243,94,0), 0, -1px, 0);
+      }
     }
+
   }
 
   .window-item:hover {
@@ -128,30 +130,35 @@ body { padding: 10px; }
       }
       color: rgb(243,94,0);
     }
-
-    .window-close {
-      .textshadow & {
-        @include text-shadow(white, 0, 1px, 0);
-      }
-
-      background-color: rgb(255, 238, 215);
-      color: rgb(243,123,56);
-    }
   }
 
-  .window-item-opened {
-    &:after {
-      bottom: 28px;
-      border-width: 0 10px 10px;
-      border-color: rgb(255,238,215) transparent;
+  .window-close {
+    .borderradius & {
+      @include border-radius(3px);
     }
-    &.window-item:hover:after {
-      border-color: rgb(255,238,215) transparent;
-    }
-    &.window-item-ding:after {
-      border-color: rgb(249,167,55) transparent;
-    }
+
+    font-size: 10px;
+    position: absolute;
+    display: block;
+    padding: 2px 5px 3px 5px;
+    color: rgb(243,123,56);
+    text-align: center;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    color: white;
   }
+
+  .window-close:hover {
+    .textshadow & {
+      @include text-shadow(white, 0, 1px, 0);
+    }
+
+    background-color: rgb(255, 238, 215);
+    color: rgb(243,123,56);
+  }
+
+
 
   .window-item .chat-dialog { display: none; }
   .window-item-opened .chat-dialog { display: block; }
@@ -259,6 +266,166 @@ body { padding: 10px; }
         display: block;
         float: left;
       }
+    }
+  }
+
+  .chat-contacts {
+    float: left;
+    margin-right: 15px;
+  }
+
+  .chat-contacts-tray {
+    .borderradius & {
+      @include border-radius(5px);
+    }
+
+    .cssgradients & {
+      @include background(linear-gradient(rgb(174,213,132), rgb(97,190,128)));
+    }
+
+    .boxshadow & {
+      @include single-box-shadow(transparentize(#000, 0.5), 0, 0, 3px, 0);
+    }
+
+    &:after {
+      content:" ";
+      position:absolute;
+      bottom:-10px;
+      left: 70px;
+      border-width:10px 10px 0;
+      border-style: solid;
+      border-color: rgb(97,190,128) transparent;
+      display:block;
+      width:0;
+    }
+
+    border: 1px solid rgb(97,190,128);
+    width: 160px;
+    height: 28px;
+    position: relative;
+    cursor: pointer;
+
+    .chat-contacts-label {
+      .textshadow & {
+        @include text-shadow(rgb(97,190,128), 0, -1px, 0);
+      }
+
+      display: block;
+      margin: 7px 20px 9px 20px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .chat-contacts-tray-open {
+    .cssgradients & {
+      @include background(linear-gradient(rgb(97,190,128), rgb(174,213,132)));
+    }
+
+    &:after {
+      bottom: 29px;
+      left: 70px;
+      border-width: 0 10px 10px;
+      border-style: solid;
+      border-color: rgb(97,190,128) transparent;
+    }
+
+    .chat-contacts-list {
+      display: block;
+    }
+
+  }
+
+  .chat-contacts-list {
+    .borderradius & {
+      @include border-radius(5px);
+    }
+    .boxshadow & {
+      @include single-box-shadow(transparentize(#000, 0.5), 0, 0, 3px, 0);
+    }
+
+    background-color: white;
+    display: block;
+    position: relative;
+    border: 1px solid rgb(243,123,56);
+    top: -368px;
+    width: 140px;
+    height: 300px;
+    padding: 10px;
+    cursor: auto;
+
+    .chat-contact-thumb {
+      width: 24px;
+      height: 24px;
+      float: left;
+      margin-right: 6px;
+    }
+
+    .chat-contact-username {
+      @include ellipsis();
+      display: block;
+      color: rgb(76,172,213);
+    }
+
+    .chat-contact-status {
+      .borderradius & {
+        @include border-radius(10px);
+      }
+
+      width: 8px;
+      height: 8px;
+      background-color: rgb(97,160,128);
+      display: block;
+      float: left;
+      margin-top: 4px;
+      text-indent: -99999px;
+      overflow: hidden;
+    }
+
+    .chat-contact-role {
+      display: block;
+      margin-top: 1px;
+      margin-left: 3px;
+      float: left;
+      color: rgb(179,178,179);
+    }
+
+    .chat-contacts-title {
+      display: block;
+      width: 130px;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(76,172,213);
+      float: left;
+      margin-bottom: 10px;
+    }
+
+    .chat-minimize {
+      font-weight: bold;
+      font-size: 12px;
+      color: rgb(179,178,179);
+      display: block;
+      float: left;
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+    }
+
+    ul {
+      clear: left;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 275px;
+    }
+
+    li {
+      @include clearfix;
+      clear: both;
+      cursor: pointer;
+      margin-bottom: 5px;
+      padding-right: 10px;
     }
   }
 }

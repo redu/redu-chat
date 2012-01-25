@@ -79,7 +79,7 @@ body {
   height: 60px;
   position: absolute;
   bottom: 10px;
-  left: 200px;
+  left: 100px;
   width: 1000px;
   padding-top: 15px;
 }
@@ -148,30 +148,28 @@ body {
 .textshadow .chat-tray .window-item .chat-contact {
   text-shadow: white 0 1px 0;
 }
-/* line 70, ../../lib/sass/screen.scss */
-.chat-tray .window-item .window-close {
-  font-size: 10px;
-  position: absolute;
-  display: block;
-  padding: 2px 5px 3px 5px;
-  color: #f37b38;
-  text-align: center;
-  font-weight: bold;
-  right: 0;
-  top: 0;
+/* line 73, ../../lib/sass/screen.scss */
+.chat-tray .window-item-opened:after {
+  bottom: 28px;
+  border-width: 0 10px 10px;
+  border-color: #f9a737 transparent;
 }
-/* line 71, ../../lib/sass/screen.scss */
-.borderradius .chat-tray .window-item .window-close {
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
+/* line 78, ../../lib/sass/screen.scss */
+.chat-tray .window-item-opened.window-item:hover:after {
+  border-color: #ffeed7 transparent;
 }
-/* line 74, ../../lib/sass/screen.scss */
-.textshadow .chat-tray .window-item .window-close {
-  text-shadow: white 0 1px 0;
+/* line 81, ../../lib/sass/screen.scss */
+.chat-tray .window-item-opened.window-item-ding:after {
+  border-color: #f9a737 transparent;
+}
+/* line 84, ../../lib/sass/screen.scss */
+.cssgradients .chat-tray .window-item-opened {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f9a737), color-stop(100%, #ffeed7));
+  background: -webkit-linear-gradient(#f9a737, #ffeed7);
+  background: -moz-linear-gradient(#f9a737, #ffeed7);
+  background: -o-linear-gradient(#f9a737, #ffeed7);
+  background: -ms-linear-gradient(#f9a737, #ffeed7);
+  background: linear-gradient(#f9a737, #ffeed7);
 }
 /* line 90, ../../lib/sass/screen.scss */
 .chat-tray .window-item-ding {
@@ -198,16 +196,15 @@ body {
 .textshadow .chat-tray .window-item-ding .chat-contact {
   text-shadow: #f35e00 0 -1px 0;
 }
-/* line 109, ../../lib/sass/screen.scss */
-.chat-tray .window-item-ding .window-close {
-  background-color: #ffeed7;
-  color: #f37b38;
+/* line 110, ../../lib/sass/screen.scss */
+.textshadow .chat-tray .window-item-ding .window-close {
+  text-shadow: #f35e00 0 -1px 0;
 }
-/* line 115, ../../lib/sass/screen.scss */
+/* line 117, ../../lib/sass/screen.scss */
 .chat-tray .window-item:hover {
   border-color: #f37b38;
 }
-/* line 116, ../../lib/sass/screen.scss */
+/* line 118, ../../lib/sass/screen.scss */
 .cssgradients .chat-tray .window-item:hover {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffeed7), color-stop(100%, #f37b38));
   background: -webkit-linear-gradient(#ffeed7, #f37b38);
@@ -216,50 +213,58 @@ body {
   background: -ms-linear-gradient(#ffeed7, #f37b38);
   background: linear-gradient(#ffeed7, #f37b38);
 }
-/* line 119, ../../lib/sass/screen.scss */
+/* line 121, ../../lib/sass/screen.scss */
 .chat-tray .window-item:hover:after {
   border-color: #f37b38 transparent;
 }
-/* line 125, ../../lib/sass/screen.scss */
+/* line 127, ../../lib/sass/screen.scss */
 .chat-tray .window-item:hover .chat-contact {
   color: #f35e00;
 }
-/* line 126, ../../lib/sass/screen.scss */
+/* line 128, ../../lib/sass/screen.scss */
 .textshadow .chat-tray .window-item:hover .chat-contact {
   text-shadow: white 0 1px 0;
 }
-/* line 132, ../../lib/sass/screen.scss */
-.chat-tray .window-item:hover .window-close {
+/* line 135, ../../lib/sass/screen.scss */
+.chat-tray .window-close {
+  font-size: 10px;
+  position: absolute;
+  display: block;
+  padding: 2px 5px 3px 5px;
+  color: #f37b38;
+  text-align: center;
+  font-weight: bold;
+  right: 0;
+  top: 0;
+  color: white;
+}
+/* line 136, ../../lib/sass/screen.scss */
+.borderradius .chat-tray .window-close {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 152, ../../lib/sass/screen.scss */
+.chat-tray .window-close:hover {
   background-color: #ffeed7;
   color: #f37b38;
 }
-/* line 133, ../../lib/sass/screen.scss */
-.textshadow .chat-tray .window-item:hover .window-close {
+/* line 153, ../../lib/sass/screen.scss */
+.textshadow .chat-tray .window-close:hover {
   text-shadow: white 0 1px 0;
 }
-/* line 143, ../../lib/sass/screen.scss */
-.chat-tray .window-item-opened:after {
-  bottom: 28px;
-  border-width: 0 10px 10px;
-  border-color: #ffeed7 transparent;
-}
-/* line 148, ../../lib/sass/screen.scss */
-.chat-tray .window-item-opened.window-item:hover:after {
-  border-color: #ffeed7 transparent;
-}
-/* line 151, ../../lib/sass/screen.scss */
-.chat-tray .window-item-opened.window-item-ding:after {
-  border-color: #f9a737 transparent;
-}
-/* line 156, ../../lib/sass/screen.scss */
+/* line 163, ../../lib/sass/screen.scss */
 .chat-tray .window-item .chat-dialog {
   display: none;
 }
-/* line 157, ../../lib/sass/screen.scss */
+/* line 164, ../../lib/sass/screen.scss */
 .chat-tray .window-item-opened .chat-dialog {
   display: block;
 }
-/* line 159, ../../lib/sass/screen.scss */
+/* line 166, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog {
   background-color: white;
   display: block;
@@ -269,7 +274,7 @@ body {
   width: 280px;
   height: 320px;
 }
-/* line 160, ../../lib/sass/screen.scss */
+/* line 167, ../../lib/sass/screen.scss */
 .borderradius .chat-tray .chat-dialog {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -278,14 +283,14 @@ body {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 163, ../../lib/sass/screen.scss */
+/* line 170, ../../lib/sass/screen.scss */
 .boxshadow .chat-tray .chat-dialog {
   -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
 }
-/* line 175, ../../lib/sass/screen.scss */
+/* line 182, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-input {
   border-top: 1px solid #f37b38;
   position: absolute;
@@ -295,7 +300,7 @@ body {
   background-color: #f0f0f0;
   width: 100%;
 }
-/* line 176, ../../lib/sass/screen.scss */
+/* line 183, ../../lib/sass/screen.scss */
 .borderradius .chat-tray .chat-dialog .chat-input {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -310,7 +315,7 @@ body {
   -khtml-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 189, ../../lib/sass/screen.scss */
+/* line 196, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-input input {
   outline: 0;
   border: none;
@@ -318,12 +323,12 @@ body {
   width: 100%;
   background-color: transparent;
 }
-/* line 198, ../../lib/sass/screen.scss */
+/* line 205, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-info {
   height: 35px;
   margin: 8px;
 }
-/* line 203, ../../lib/sass/screen.scss */
+/* line 210, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-info-contact {
   white-space: nowrap;
   overflow: hidden;
@@ -336,12 +341,12 @@ body {
   float: left;
   display: block;
 }
-/* line 212, ../../lib/sass/screen.scss */
+/* line 219, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-contact-status,
 .chat-tray .chat-dialog .chat-status {
   color: #b3b2b3;
 }
-/* line 215, ../../lib/sass/screen.scss */
+/* line 222, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-minimize {
   display: block;
   float: right;
@@ -353,7 +358,7 @@ body {
   font-weight: bold;
   font-size: 12px;
 }
-/* line 216, ../../lib/sass/screen.scss */
+/* line 223, ../../lib/sass/screen.scss */
 .borderradius .chat-tray .chat-dialog .chat-minimize {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -362,14 +367,14 @@ body {
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 227, ../../lib/sass/screen.scss */
+/* line 234, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-text {
   margin: 8px 2px 8px 8px;
   height: 230px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-/* line 233, ../../lib/sass/screen.scss */
+/* line 240, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-text li {
   margin-right: 18px;
   display: inline-block;
@@ -377,7 +382,7 @@ body {
   clear: both;
   margin-bottom: 10px;
 }
-/* line 240, ../../lib/sass/screen.scss */
+/* line 247, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-text li .chat-time {
   display: none;
   width: 60px;
@@ -385,19 +390,213 @@ body {
   float: right;
   color: #b3b2b3;
 }
-/* line 247, ../../lib/sass/screen.scss */
+/* line 254, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-text li:hover .chat-time {
   display: block;
 }
-/* line 251, ../../lib/sass/screen.scss */
+/* line 258, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-text .chat-dialog-thumb {
   width: 24px;
   height: 24px;
   margin-right: 8px;
   float: left;
 }
-/* line 258, ../../lib/sass/screen.scss */
+/* line 265, ../../lib/sass/screen.scss */
 .chat-tray .chat-dialog .chat-text .chat-line {
   display: block;
   float: left;
+}
+/* line 272, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts {
+  float: left;
+  margin-right: 15px;
+}
+/* line 277, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-tray {
+  border: 1px solid #61be80;
+  width: 160px;
+  height: 28px;
+  position: relative;
+  cursor: pointer;
+}
+/* line 278, ../../lib/sass/screen.scss */
+.borderradius .chat-tray .chat-contacts-tray {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 282, ../../lib/sass/screen.scss */
+.cssgradients .chat-tray .chat-contacts-tray {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #aed584), color-stop(100%, #61be80));
+  background: -webkit-linear-gradient(#aed584, #61be80);
+  background: -moz-linear-gradient(#aed584, #61be80);
+  background: -o-linear-gradient(#aed584, #61be80);
+  background: -ms-linear-gradient(#aed584, #61be80);
+  background: linear-gradient(#aed584, #61be80);
+}
+/* line 286, ../../lib/sass/screen.scss */
+.boxshadow .chat-tray .chat-contacts-tray {
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+/* line 290, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-tray:after {
+  content: " ";
+  position: absolute;
+  bottom: -10px;
+  left: 70px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #61be80 transparent;
+  display: block;
+  width: 0;
+}
+/* line 308, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-tray .chat-contacts-label {
+  display: block;
+  margin: 7px 20px 9px 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+/* line 309, ../../lib/sass/screen.scss */
+.textshadow .chat-tray .chat-contacts-tray .chat-contacts-label {
+  text-shadow: #61be80 0 -1px 0;
+}
+/* line 323, ../../lib/sass/screen.scss */
+.cssgradients .chat-tray .chat-contacts-tray-open {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #61be80), color-stop(100%, #aed584));
+  background: -webkit-linear-gradient(#61be80, #aed584);
+  background: -moz-linear-gradient(#61be80, #aed584);
+  background: -o-linear-gradient(#61be80, #aed584);
+  background: -ms-linear-gradient(#61be80, #aed584);
+  background: linear-gradient(#61be80, #aed584);
+}
+/* line 327, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-tray-open:after {
+  bottom: 29px;
+  left: 70px;
+  border-width: 0 10px 10px;
+  border-style: solid;
+  border-color: #61be80 transparent;
+}
+/* line 335, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-tray-open .chat-contacts-list {
+  display: block;
+}
+/* line 341, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list {
+  background-color: white;
+  display: block;
+  position: relative;
+  border: 1px solid #f37b38;
+  top: -368px;
+  width: 140px;
+  height: 300px;
+  padding: 10px;
+  cursor: auto;
+}
+/* line 342, ../../lib/sass/screen.scss */
+.borderradius .chat-tray .chat-contacts-list {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 345, ../../lib/sass/screen.scss */
+.boxshadow .chat-tray .chat-contacts-list {
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+/* line 359, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list .chat-contact-thumb {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 6px;
+}
+/* line 366, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list .chat-contact-username {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: block;
+  color: #4cacd5;
+}
+/* line 372, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list .chat-contact-status {
+  width: 8px;
+  height: 8px;
+  background-color: #61a080;
+  display: block;
+  float: left;
+  margin-top: 4px;
+  text-indent: -99999px;
+  overflow: hidden;
+}
+/* line 373, ../../lib/sass/screen.scss */
+.borderradius .chat-tray .chat-contacts-list .chat-contact-status {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 387, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list .chat-contact-role {
+  display: block;
+  margin-top: 1px;
+  margin-left: 3px;
+  float: left;
+  color: #b3b2b3;
+}
+/* line 395, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list .chat-contacts-title {
+  display: block;
+  width: 130px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #4cacd5;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 405, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list .chat-minimize {
+  font-weight: bold;
+  font-size: 12px;
+  color: #b3b2b3;
+  display: block;
+  float: left;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+/* line 416, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list ul {
+  clear: left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 275px;
+}
+/* line 423, ../../lib/sass/screen.scss */
+.chat-tray .chat-contacts-list li {
+  overflow: hidden;
+  *zoom: 1;
+  clear: both;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding-right: 10px;
 }

@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "compass"
   s.add_development_dependency "jasmine"
   s.add_development_dependency "rails", "3.0.11"
+  s.add_development_dependency "rb-fsevent"
 end
