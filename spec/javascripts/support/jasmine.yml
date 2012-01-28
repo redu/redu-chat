@@ -11,6 +11,8 @@
 #   - dist/**/*.js
 #
 src_files:
+    - public/javascripts/jquery.js
+    - public/javascripts/underscore.js
     - public/javascripts/backbone.js
     - public/javascripts/**/*.js
 
@@ -26,6 +28,7 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
+  - 'public/stylesheets/*.css'
 
 # helpers
 #
@@ -38,6 +41,7 @@ stylesheets:
 #   - helpers/**/*.js
 #
 helpers:
+  - helpers/**/*.js
 
 # spec_files
 #

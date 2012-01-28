@@ -1,0 +1,187 @@
+<script type="text/template" id="chat-contacts">
+  <div class="chat-contacts">
+    <div class="chat-contacts-tray chat-contacts-tray-open">
+      <span class="chat-contacts-label">
+        Chat (222)
+      </span>
+      <div class="chat-contacts-list">
+        <span class="chat-contacts-title">Chat</span>
+        <span class="chat-minimize">&minus;</span>
+        <ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="chat-contact-item">
+<li>
+<img src="<%= thumbnail %>" alt="" class="chat-contact-thumb" >
+<span class="chat-contact-username"><%= display_name %></span>
+<span class="chat-contact-status">online</span>
+<span class="chat-contact-role"><%= role %></span>
+</li>
+</script>
+
+<div class="chat-tray"></div>
+
+<!--
+<div class="chat-tray">
+  <ul>
+    <li >
+      <div class="window-item window-item-ding">
+        <span class="chat-contact">
+          Guilherme Cavalcanti
+        </span>
+        <span class="window-close">x</span>
+      </div>
+    </li>
+    <li >
+      <div class="window-item">
+        <span class="chat-contact">
+          Guilherme Cavalcanti
+        </span>
+        <span class="window-close">x</span>
+      </div>
+    </li>
+    <li >
+      <div class="window-item window-item-opened">
+        <span class="chat-contact">
+          Guilherme Cavalcanti
+        </span>
+        <span class="window-close">x</span>
+      </div>
+    </li>
+    <li >
+      <div class="window-item window-item-ding window-item-opened">
+        <span class="chat-contact">
+          Guilherme Cavalcanti
+        </span>
+        <span class="window-close">x</span>
+        <div class="chat-dialog">
+          <div class="chat-info">
+            <span class="chat-info-contact">
+              Guilherme Cavalcanti
+            </span>
+            <span class="chat-contact-status">(online)</span>
+            <span class="chat-status">enviando...</span>
+            <span class="chat-minimize">&minus;</span>
+          </div>
+          <div class="chat-text">
+            <ol>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+              <li>
+                <span class="chat-time">hoje, 21:24</span>
+                <div class="chat-dialog-thumb">
+                  <img src="images/user-24.png" width="24" height="24">
+                </div>
+                <span class="chat-line">lorem lipsum</span>
+                <span class="chat-line">loreem lorem lorem lipsum ipsum lore darj</span>
+              </li>
+            </ol>
+          </div>
+          <div class="chat-input">
+            <input type="text">
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+-->
+
