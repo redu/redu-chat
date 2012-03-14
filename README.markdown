@@ -30,4 +30,10 @@ A new chat instance should be created as follows:
 
 ## Development
 
-**TODO**
+No make any code change you have to startup a number os background processes (coffescript and sass compiler, jasmine server and so on). To do so, you just have to run the foreman.
+
+```bash
+bundle --binstubs
+bin/foreman start
+```
+
